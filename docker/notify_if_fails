@@ -1,0 +1,14 @@
+#!/bin/bash
+# runs the given string argument in a bash shell and semds a notification to the sysadmin slack channel
+
+cmd="$1"
+message="$2"
+if [ -z "$message" ]
+then
+  message="command '""$cmd""' failed"
+fi
+
+if ! bash -c "$cmd"
+then
+  slack chat send --channel "#sysadmin" --text "$message"
+fi
