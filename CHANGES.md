@@ -1,4 +1,6 @@
 # Changes for docker-adminbox
 
-## unreleased
+## 2020-05-05 / 0.1.0
+
+- initial release
 
