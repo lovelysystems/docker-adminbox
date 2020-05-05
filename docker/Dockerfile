@@ -1,11 +1,11 @@
-FROM centos:7.6.1810
+FROM centos:7.7.1908
 
-RUN yum install -y https://download.postgresql.org/pub/repos/yum/11/redhat/rhel-7-x86_64/pgdg-centos11-11-2.noarch.rpm
-RUN yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-RUN yum install epel-release -y \
+RUN yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm \
+    && yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo \
+    && yum install epel-release -y \
     && yum update -y \
-    && yum install --setopt=skip_missing_names_on_install=False -y \
-    postgresql11 awscli docker-ce-cli less curl jq \
+    && yum install -y --setopt=skip_missing_names_on_install=False \
+    postgresql12 awscli docker-ce-cli less curl jq mtr \
     && yum clean all
 
 RUN curl -o /usr/bin/slack \
