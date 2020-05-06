@@ -1,6 +1,6 @@
 # Changes for docker-adminbox
 
-## unreleased
+## 2020-05-06 / 0.2.0
 
 - centos 7.7
 - postgres client version 12
