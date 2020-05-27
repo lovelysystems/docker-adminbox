@@ -5,7 +5,7 @@ RUN yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x
     && yum install epel-release -y \
     && yum update -y \
     && yum install -y --setopt=skip_missing_names_on_install=False \
-    postgresql12 awscli docker-ce-cli less curl jq mtr \
+    postgresql12 mysql awscli docker-ce-cli less curl jq mtr \
     && yum clean all
 
 RUN curl -o /usr/bin/slack \
