@@ -1,5 +1,12 @@
 # Changes for docker-adminbox
 
+## Unreleased
+
+- update centos to latest 7 version
+- udpate postgres to version 14
+- use python3 to install awscli as the 
+  standard package does not work anymore
+
 ## 2020-05-27 / 0.3.0
 
 - added mysql client
