@@ -1,5 +1,5 @@
 plugins {
-    id("com.lovelysystems.gradle") version ("1.8.1")
+    id("com.lovelysystems.gradle") version ("1.7.0")
 }
 
 lovely {
