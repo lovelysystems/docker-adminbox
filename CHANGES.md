@@ -1,11 +1,12 @@
 # Changes for docker-adminbox
 
-## Unreleased
+## 2020-05-27 / 0.4.0
 
 - update centos to latest 7 version
 - udpate postgres to version 14
 - use python3 to install awscli as the 
   standard package does not work anymore
+- update gradle
 
 ## 2020-05-27 / 0.3.0
 
