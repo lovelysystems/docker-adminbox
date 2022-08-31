@@ -5,6 +5,12 @@
 - notify_if_fails now also notifies on errors in piped commands
   (eg `notify_if_fails 'pg_dumpall --break|gzip|aws s3 cp - s3://bucket/file.sql.gz'`)
 
+### Develop
+
+- Allow to build image on/for arm64 platforms
+  - requires docker >v20.10 (error `unknown flag: --builder`)
+  - first time call: `gw prepareDockerContainerBuilder` (see https://github.com/lovelysystems/lovely-gradle-plugin)
+
 ## 2020-05-27 / 0.4.0
 
 - update centos to latest 7 version
