@@ -8,7 +8,12 @@ then
   message="command '""$cmd""' failed"
 fi
 
-if ! bash -c "$cmd"
+# in case cmd uses pipes, capture any error within the pipe using pipefail
+# see https://stackoverflow.com/a/35465242
+bash -o pipefail -c "$cmd"
+
+# check for error (exit code != 0) and send slack notification
+if ! [ $? -eq 0 ]
 then
   slack chat send --channel "#sysadmin" --text "$message"
 fi
