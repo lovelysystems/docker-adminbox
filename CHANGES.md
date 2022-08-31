@@ -1,5 +1,9 @@
 # Changes for docker-adminbox
 
+## 2022-08-31 / 0.4.2
+
+- limit to amd64 builds (needs adaptions for arm support)
+
 ## 2022-08-31 / 0.4.1
 
 - notify_if_fails now also notifies on errors in piped commands

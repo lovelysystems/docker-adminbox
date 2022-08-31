@@ -4,7 +4,11 @@ plugins {
 
 lovely {
     gitProject()
-    dockerProject("lovelysystems/adminbox")
+    dockerProject(
+        "lovelysystems/adminbox",
+        platforms = listOf("linux/amd64"),
+        buildPlatforms = listOf("linux/amd64"),
+    )
 
     with(dockerFiles) {
         from("docker")
