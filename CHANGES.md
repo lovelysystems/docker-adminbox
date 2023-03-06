@@ -1,5 +1,9 @@
 # Changes for docker-adminbox
 
+## Unreleased
+
+- added rsync
+
 ## 2022-08-31 / 0.4.2
 
 - limit to amd64 builds (needs adaptions for arm support)
