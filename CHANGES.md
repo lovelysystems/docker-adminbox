@@ -1,5 +1,11 @@
 # Changes for docker-adminbox
 
+## Unreleased
+
+### Feature
+
+- slack channel for notify_if_fails can be configured via `SLACK_CHANNEL`
+
 ## 2022-08-31 / 0.4.2
 
 - limit to amd64 builds (needs adaptions for arm support)

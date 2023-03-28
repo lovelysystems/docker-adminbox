@@ -1,8 +1,11 @@
 #!/bin/bash
-# runs the given string argument in a bash shell and sends a notification to the sysadmin slack channel
+# runs the given string argument in a bash shell and sends a notification
+# to the `SLACK_CHANNEL` slack channel (defaults to `#sysadmin`)
 
 cmd="$1"
 message="$2"
+channel="${SLACK_CHANNEL:-#sysadmin}"
+
 if [ -z "$message" ]
 then
   message="command '""$cmd""' failed"
@@ -15,5 +18,5 @@ bash -o pipefail -c "$cmd"
 # check for error (exit code != 0) and send slack notification
 if ! [ $? -eq 0 ]
 then
-  slack chat send --channel "#sysadmin" --text "$message"
+  slack chat send --channel "$channel" --text "$message"
 fi
