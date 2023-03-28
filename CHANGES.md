@@ -1,6 +1,6 @@
 # Changes for docker-adminbox
 
-## Unreleased
+## 2023-03-28 / 0.5.0
 
 ### Feature
 
