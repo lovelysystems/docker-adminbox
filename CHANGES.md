@@ -1,5 +1,15 @@
 # Changes for docker-adminbox
 
+## Unreleased
+
+### Breacking
+
+- switch `notify_if_fails` from deprecated slack bots to webhooks.
+
+### Deployment
+
+- remove env `SLACK_CLI_TOKEN` and add `SLACK_WEBHOOK` 
+
 ## 2023-03-28 / 0.5.0
 
 ### Feature

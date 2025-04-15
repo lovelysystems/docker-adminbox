@@ -1,10 +1,9 @@
 #!/bin/bash
-# runs the given string argument in a bash shell and sends a notification
-# to the `SLACK_CHANNEL` slack channel (defaults to `#sysadmin`)
+# runs the given string argument in a bash shell and sends a notification to the SLACK_WEBHOOK with a message
+# if the command failed
 
 cmd="$1"
 message="$2"
-channel="${SLACK_CHANNEL:-#sysadmin}"
 
 if [ -z "$message" ]
 then
@@ -18,5 +17,5 @@ bash -o pipefail -c "$cmd"
 # check for error (exit code != 0) and send slack notification
 if ! [ $? -eq 0 ]
 then
-  slack chat send --channel "$channel" --text "$message"
+  curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"${message}\"}" $SLACK_WEBHOOK
 fi
