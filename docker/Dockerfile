@@ -8,9 +8,6 @@ RUN yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x
     postgresql14 mysql python3-pip docker-ce-cli less curl jq mtr \
     && yum clean all && pip3 install awscli
 
-RUN curl -o /usr/bin/slack \
-    https://raw.githubusercontent.com/rockymadden/slack-cli/46d22741e82d749180ae91512515132a9380ad57/src/slack \
-    && chmod 755 /usr/bin/slack
 COPY bashrc /root/.bashrc
 WORKDIR /root
 
