@@ -1,6 +1,6 @@
 # Changes for docker-adminbox
 
-## 2025-05-15 / 1.0.0
+## 2025-04-15 / 1.0.0
 
 ### Breaking
 
