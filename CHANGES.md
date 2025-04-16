@@ -1,5 +1,11 @@
 # Changes for docker-adminbox
 
+## Unreleased
+
+### Feature
+
+- upgrade aws cli from v1 to v2
+
 ## 2025-04-15 / 1.0.0
 
 ### Breaking
