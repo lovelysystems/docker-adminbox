@@ -10,8 +10,12 @@ RUN yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x
     && yum update -y \
     && yum install -y --setopt=skip_missing_names_on_install=False epel-release \
     && yum install -y --setopt=skip_missing_names_on_install=False \
-    postgresql14 mysql python3-pip docker-ce-cli less curl jq mtr \
-    && yum clean all && pip3 install awscli
+    postgresql14 mysql python3-pip docker-ce-cli less curl jq mtr unzip \
+    && yum clean all
+
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+RUN unzip awscliv2.zip
+RUN ./aws/install
 
 COPY bashrc /root/.bashrc
 WORKDIR /root
