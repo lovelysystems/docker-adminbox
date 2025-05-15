@@ -1,5 +1,11 @@
 # Changes for docker-adminbox
 
+## Unreleased
+
+### Feature
+
+- update lovely gradle plugin to 1.15.1 and build images for arm
+
 ## 2025-04-15 / 1.1.0
 
 ### Feature
